@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Landing page for the Ames Auto Rentals display ads: request a rental in Ames, Iowa.">
+<title>Request a Rental | Ames Auto Rentals</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-nav">
+<div class="wrap">
+<a class="brand" href="index.html">AMES AUTO RENTALS<small>AMES, IOWA | CAMPAIGN SITE</small></a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+<nav aria-label="Main"><ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="ads.html">Ads</a></li><li><a href="landing.html" aria-current="page">Landing Page</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero l-hero">
+<div class="wrap">
+<div class="hero-copy">
+<p class="eyebrow">AMES AUTO RENTALS | AMES, IOWA</p>
+<h1>Need wheels<br>in Ames?</h1>
+<p class="lede">Affordable car rentals, right here in Ames, Iowa. First come, first served.</p>
+<div class="cta-row"><a class="btn" href="#request">Request a Rental</a><a class="link-light" href="#rates">See vehicles and rates</a></div>
+</div>
+<div class="form-card" id="request">
+<h2>Request a rental</h2>
+<p class="hint">Takes about a minute. We email you if your request is approved.</p>
+<form id="request-form" style="display:flex;flex-direction:column;gap:14px">
+<label class="field">Full name<input type="text" name="name" placeholder="First and last name" required></label><label class="field">Email<input type="email" name="email" placeholder="you@example.com" required></label><label class="field">Phone<input type="tel" name="phone" placeholder="(515) 555-0123" required></label>
+<div class="field-row"><label class="field">Pickup date<input type="date" name="date" placeholder="" required></label><label class="field">Number of days<input type="number" name="days" placeholder="e.g. 3" required></label></div>
+<label class="field">Vehicle type<select name="vehicle" required><option value="">Please choose</option><option>Compact</option><option>Hybrid</option><option>Standard</option><option>Premium</option><option>Small SUV</option><option>Minivan</option><option>Large SUV</option><option>15-Pass Van</option></select></label>
+<button class="btn" type="submit">Submit request</button>
+<p class="form-msg" id="form-msg" tabindex="-1" role="status">This is a mockup, so nothing was sent. On the real page this would submit the request.</p>
+<p class="fineprint">No refunds for unused days. Not a confirmed reservation until approved.</p>
+</form>
+</div>
+</div>
+</section>
+<div class="trust"><div class="wrap"><div>Located only in Ames, Iowa</div><div>Rides to DSM Airport</div><div>Open 8am to 10pm, every day</div><div>Renters must be 18+ with a valid license</div></div></div>
+<div class="wrap">
+<section class="section" id="how" aria-labelledby="how-h">
+<h2 id="how-h">How it works</h2>
+<div class="steps" style="margin-top:20px">
+<div class="step"><div class="step-n">1</div><div><h3>Choose a vehicle type</h3><p>Pick a category below. Models and features are not guaranteed.</p></div></div>
+<div class="step"><div class="step-n">2</div><div><h3>Submit your request</h3><p>Fill out the short form. Your car is not saved until the request is submitted.</p></div></div>
+<div class="step"><div class="step-n">3</div><div><h3>We confirm by email</h3><p>Our team reviews every request and emails you if it is approved.</p></div></div>
+</div>
+</section>
+<section class="section" id="rates" aria-labelledby="rates-h">
+<h2 id="rates-h">Vehicles and rates</h2>
+<p class="sub">Rates are shown here so you do not have to hunt for them.</p>
+<div class="grid"><div class="card rate-card"><h3>Compact</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Hybrid</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Standard</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Premium</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Small SUV</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Minivan</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Large SUV</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>15-Pass Van</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div></div>
+</section>
+<section class="section">
+<div class="note"><h2>Good to know before you request</h2><p>Vehicles are rented first come, first served. By appointment only, with no walk-ins. We cannot provide one-way rentals, and we do not offer pickup trucks. The renter must be the cardholder and show a valid license.</p></div>
+</section>
+<section class="section"><div class="note"><h3>Contact</h3><p><span class="todo">[PHONE]</span> | <span class="todo">[EMAIL]</span></p></div></section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div>Class project mockup. Not the official Ames Auto Rentals website. Rates, phone, and email are placeholders.</div>
+<div><a href="index.html">Home</a> | <a href="ads.html">Ads</a> | <a href="landing.html">Landing Page</a></div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
