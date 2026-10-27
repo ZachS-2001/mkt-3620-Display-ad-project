@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: white;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    background: #071a33;
+    padding: 20px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.navbar nav a:hover {
+    color: #ffd23f;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+
+    background: #ffd23f;
+    color: #071a33;
+
+    padding: 16px 28px;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.dark-button {
+    background: #071a33;
+    color: white;
+}
+
+
+/* HERO */
+
+.home-hero {
+    min-height: 620px;
+
+    padding: 80px 8%;
+
+    background: #071a33;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.home-content {
+    max-width: 560px;
+}
+
+.eyebrow {
+    color: #d7a900;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.home-hero .eyebrow {
+    color: #ffd23f;
+}
+
+.home-hero h1 {
+    margin: 0 0 25px;
+
+    font-size: 64px;
+    line-height: 0.95;
+
+    font-weight: 900;
+}
+
+.large-text {
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #d5deea;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.home-image {
+    width: 48%;
+}
+
+.home-image img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* INTRO */
+
+.intro-section {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+}
+
+.intro-section h2 {
+    font-size: 40px;
+    line-height: 1.1;
+
+    margin: 0 0 20px;
+}
+
+.intro-section p:not(.eyebrow) {
+    color: #5d6878;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* VEHICLES */
+
+.vehicle-section {
+    background: #f4f6f8;
+
+    padding: 90px 8%;
+
+    text-align: center;
+}
+
+.vehicle-section h2 {
+    font-size: 40px;
+
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+.vehicle-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.vehicle-card {
+    background: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.vehicle-card h3 {
+    margin: 25px 25px 10px;
+
+    font-size: 20px;
+}
+
+.vehicle-card p {
+    margin: 0 25px 30px;
+
+    color: #5d6878;
+
+    line-height: 1.5;
+}
+
+
+/* FINAL CTA */
+
+.home-cta {
+    background: #ffd23f;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.home-cta h2 {
+    font-size: 42px;
+
+    margin: 0 0 15px;
+}
+
+.home-cta p {
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #050f1d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer strong {
+    font-size: 20px;
+
+    letter-spacing: 1px;
+}
+
+footer p {
+    color: #aeb8c5;
+}
+
+footer a {
+    color: #dce3eb;
+
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #ffd23f;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .home-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .home-image {
+        width: 100%;
+    }
+
+    .home-hero h1 {
+        font-size: 50px;
+    }
+
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .home-hero h1 {
+        font-size: 40px;
+    }
+
+    .large-text {
+        font-size: 20px;
+    }
+
+    .intro-section h2,
+    .vehicle-section h2 {
+        font-size: 30px;
+    }
+
+    .home-cta h2 {
+        font-size: 30px;
+    }
+}
