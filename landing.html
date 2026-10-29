@@ -6,8 +6,100 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Landing page for the Ames Auto Rentals display ads: request a rental in Ames, Iowa.">
 <title>Request a Rental | Ames Auto Rentals</title>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/landing.css">
+<style>
+/* Ames Auto Rentals campaign site: shared styles */
+:root{
+  --slate:#17232b; --slate-2:#22333d; --orange:#ff7a45; --rust:#c2410c; --blue:#2a7fa8;
+  --paper:#f6f4f0; --sand:#e6e1d8; --ink:#17232b; --muted:#4a5a64; --mist:#d6e2e8; --line:#d9d4cb;
+  --font:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --maxw:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.5}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--ink);padding:10px 14px;z-index:100}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* Site navigation (same on every page) */
+.site-nav{background:var(--orange);color:var(--ink);position:sticky;top:0;z-index:50}
+.site-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:58px}
+.brand{font-weight:800;letter-spacing:1px;text-decoration:none;font-size:18px;line-height:1.05}
+.brand small{display:block;font-size:10px;letter-spacing:1.5px;font-weight:700}
+.nav-links{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:9px 14px;border-radius:4px;text-decoration:none;font-weight:700;font-size:15px}
+.nav-links a:hover{background:rgba(23,35,43,.12)}
+.nav-links a[aria-current="page"]{background:var(--slate);color:#fff}
+.nav-toggle{display:none;background:var(--slate);color:#fff;border:0;border-radius:4px;padding:9px 14px;font:700 14px var(--font);cursor:pointer}
+@media (max-width:680px){
+  .nav-toggle{display:block}
+  .nav-links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--orange);padding:8px 24px 14px;gap:2px}
+  .nav-links.open{display:flex}
+}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--rust);color:#fff;font-weight:700;font-size:16px;padding:15px 26px;border-radius:4px;text-decoration:none;text-align:center;border:0;cursor:pointer;font-family:var(--font)}
+.btn:hover{background:#9a3309}
+.btn-ghost{background:transparent;border:2px solid #fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.link-light{color:#fff;font-weight:600}
+
+/* Hero */
+.hero{background:var(--slate);color:#fff}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding-top:44px;padding-bottom:60px}
+.hero-copy{flex:1 1 420px}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--orange);margin:0 0 12px}
+.hero h1{margin:0 0 16px;font-size:clamp(40px,7vw,60px);line-height:1.02;font-weight:800}
+.hero .lede{margin:0 0 26px;font-size:20px;line-height:1.4;color:var(--mist);max-width:480px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+/* Sections */
+.section{padding:56px 0 8px}
+.section h2{margin:0 0 8px;font-size:30px;font-weight:800}
+.section .sub{margin:0 0 24px;color:var(--muted);font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.card h3{margin:0;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .tag{font-size:12px;font-weight:800;letter-spacing:1.2px;color:var(--rust)}
+.card a.more{margin-top:6px;font-weight:700;color:var(--rust)}
+.todo{background:#fff2a8;color:var(--ink);padding:0 4px;border-radius:2px}
+.note{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px}
+.note h2,.note h3{margin:0 0 8px;font-size:20px}
+.note p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+
+/* Footer */
+.site-footer{background:var(--slate);color:var(--mist);margin-top:64px}
+.site-footer .wrap{padding-top:24px;padding-bottom:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px}
+.site-footer a{color:var(--mist)}
+</style>
+<style>
+/* Landing page */
+.l-hero .wrap{padding-bottom:56px}
+.l-hero h1{font-size:clamp(40px,7vw,56px)}
+.form-card{flex:1 1 360px;max-width:480px;background:#fff;color:var(--ink);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.form-card h2{margin:0;font-size:22px;font-weight:800}
+.form-card .hint{margin:0;font-size:14px;line-height:1.4;color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600}
+.field input,.field select{font:15px var(--font);padding:11px 12px;border:1px solid #9aa9b2;border-radius:4px;background:#fff;color:var(--ink)}
+.field-row{display:flex;flex-wrap:wrap;gap:12px}
+.field-row .field{flex:1 1 130px}
+.fineprint{font-size:12px;color:var(--muted);text-align:center;margin:0}
+.form-msg{display:none;background:#e7f3ea;border:1px solid #9ccaa6;color:#1d4d2b;border-radius:4px;padding:12px;font-size:14px}
+.form-msg.show{display:block}
+.trust{background:var(--sand)}
+.trust .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;padding-top:14px;padding-bottom:14px}
+.trust div{flex:1 1 200px;font-size:15px;font-weight:600}
+.steps{display:flex;flex-wrap:wrap;gap:28px}
+.step{flex:1 1 260px;display:flex;gap:14px}
+.step-n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--rust);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.step h3{margin:0;font-size:17px}
+.step p{margin:4px 0 0;color:var(--muted);font-size:15px;line-height:1.45}
+.rate-card .rate{font-size:14px;color:var(--muted)}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -68,6 +160,28 @@
 <div><a href="index.html">Home</a> | <a href="ads.html">Ads</a> | <a href="landing.html">Landing Page</a></div>
 </div>
 </footer>
-<script src="js/main.js"></script>
+<script>
+// Mobile navigation toggle
+(function () {
+  var btn = document.querySelector('.nav-toggle');
+  var links = document.getElementById('nav-links');
+  if (btn && links) {
+    btn.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  // Landing page: the request form is a mockup, so nothing is sent anywhere
+  var form = document.getElementById('request-form');
+  var msg = document.getElementById('form-msg');
+  if (form && msg) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      msg.classList.add('show');
+      msg.focus();
+    });
+  }
+})();
+</script>
 </body>
 </html>
