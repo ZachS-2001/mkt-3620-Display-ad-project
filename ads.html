@@ -22,7 +22,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--orange);outline-offset:2px}
 .skip{position:absolute;left:-999px;top:0;background:#fff;color:var(--ink);padding:10px 14px;z-index:100}
 .skip:focus{left:8px;top:8px}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
 
 /* Site navigation (same on every page) */
 .site-nav{background:var(--orange);color:var(--ink);position:sticky;top:0;z-index:50}
@@ -150,6 +150,23 @@ a{color:inherit}
 .ad-hp .ad-btn{font-size:17px;padding:15px 8px}
 .ad-hp .ad-url{font-size:12px;text-align:center}
 </style>
+<style>
+/* Page layout: ads placed in standard positions around the main content */
+.top-ad{background:#fff;border-bottom:1px solid var(--line)}
+.top-ad .wrap{padding-top:14px;padding-bottom:14px}
+.ad-slot{display:flex;flex-direction:column;align-items:center;gap:5px}
+.ad-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.ad-scroll-x{max-width:100%;overflow-x:auto}
+.layout{display:grid;grid-template-columns:160px minmax(0,1fr) 300px;grid-template-areas:"left main right";gap:20px;align-items:start;padding-top:8px}
+.rail-left{grid-area:left}.main-col{grid-area:main}.rail-right{grid-area:right}
+.rail-left,.rail-right{position:sticky;top:78px;padding-top:56px}
+.inline-ad{margin:32px 0 8px}
+.main-col .section{padding-top:48px}
+@media (max-width:940px){
+  .layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"main" "right" "left";gap:20px}
+  .rail-left,.rail-right{position:static;padding-top:24px}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -162,7 +179,18 @@ a{color:inherit}
 </header>
 <main id="main">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="car-sedan" viewBox="0 0 244 100"><ellipse cx="122" cy="90" rx="108" ry="5" fill="#000000" opacity="0.35"/><path d="M10 70 L10 58 Q10 50 20 48 L58 44 L82 22 Q86 18 92 18 L156 18 Q164 18 170 24 L192 44 L222 50 Q232 52 232 62 L232 70 Z" fill="#FFFFFF"/><path d="M66 44 L86 24 L120 24 L120 44 Z M128 24 L156 24 L176 44 L128 44 Z" fill="#2A7FA8"/><rect x="10" y="62" width="222" height="5" fill="#FF7A45"/><circle cx="60" cy="74" r="17" fill="#17232B"/><circle cx="60" cy="74" r="7" fill="#FF7A45"/><circle cx="182" cy="74" r="17" fill="#17232B"/><circle cx="182" cy="74" r="7" fill="#FF7A45"/></symbol><symbol id="car-suv" viewBox="0 0 244 100"><ellipse cx="122" cy="90" rx="108" ry="5" fill="#000000" opacity="0.35"/><path d="M10 74 L10 52 Q10 44 20 42 L52 38 L74 16 Q78 12 84 12 L180 12 Q188 12 194 18 L214 40 L224 44 Q234 46 234 58 L234 74 Z" fill="#FFFFFF"/><path d="M60 38 L78 18 L116 18 L116 38 Z M124 18 L178 18 L196 38 L124 38 Z" fill="#2A7FA8"/><rect x="10" y="62" width="222" height="5" fill="#FF7A45"/><circle cx="60" cy="74" r="17" fill="#17232B"/><circle cx="60" cy="74" r="7" fill="#FF7A45"/><circle cx="182" cy="74" r="17" fill="#17232B"/><circle cx="182" cy="74" r="7" fill="#FF7A45"/></symbol></defs></svg>
+<div class="top-ad"><div class="wrap"><div class="ad-slot"><span class="ad-label">Advertisement | Leaderboard 728 x 90</span><div class="ad-scroll-x"><a class="ad ad-lb" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Rent local. Request a Rental">
+<div class="ad-brand"><span>AMES AUTO<br>RENTALS</span><small>AMES, IOWA</small></div>
+<div class="mid"><h4>Need wheels in Ames? Rent local.</h4><ul><li>Affordable</li><li>DSM Airport rides</li><li>First come, first served</li></ul></div>
+<div class="side"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></a></div></div></div></div>
 <div class="wrap">
+<div class="layout">
+<aside class="rail-left" aria-label="Advertisement"><div class="ad-slot"><span class="ad-label">Ad | 160 x 600</span><a class="ad ad-sk" href="landing.html" aria-label="Ames Auto Rentals: Rent local in Ames. Request a Rental">
+<div class="ad-brand"><span>AMES<br>AUTO<br>RENTALS</span><small>AMES, IOWA</small></div>
+<div class="body"><h4>Rent local in Ames.</h4><svg class="car" viewBox="0 0 244 100" role="img" aria-label="Illustration of a sedan"><use href="#car-sedan"/></svg>
+<ul><li>Affordable rates</li><li>Cars to vans</li><li>Rides to DSM Airport</li><li>First come, first served</li></ul>
+<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a></div></aside>
+<div class="main-col">
 <section class="section" id="campaign" aria-labelledby="camp-h">
 <h2 id="camp-h">Campaign description</h2>
 <p class="sub">Targeting, goal, hook, and the benchmark estimates behind the budget.</p>
@@ -172,7 +200,14 @@ a{color:inherit}
 <div class="card"><span class="tag">PLACEMENT TARGETING</span><h3>Local and travel sites</h3><p>Iowa State Daily, Ames Tribune, Cyclones.com, KCCI, WHO 13, Visit Ames, and Tripadvisor — Iowa State and central-Iowa news plus travel and trip-planning sites, geo-targeted to the Ames area. Estimated CPMs run $5 to $14.</p></div>
 <div class="card"><span class="tag">THE HOOK</span><h3>“Need wheels in Ames?”</h3><p>A short, local question, varied slightly by ad size (“Rent local in Ames.”). Core message: affordable local rentals, easy to request, with rides to DSM Airport.</p></div>
 </div>
-<h3 style="margin:28px 0 8px;font-size:20px">Financial estimates (4-week campaign)</h3>
+</section>
+<div class="inline-ad"><div class="ad-slot"><span class="ad-label">Advertisement | Medium Rectangle 300 x 250</span><a class="ad ad-mr" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Request a Rental">
+<div class="ad-brand"><span>AMES AUTO RENTALS</span><small>AMES, IOWA</small></div>
+<div class="body"><h4>Need wheels in Ames?</h4>
+<div class="mid"><ul><li>Affordable local rentals</li><li>Rides to DSM Airport</li><li>First come, first served</li></ul><svg class="car" viewBox="0 0 244 100" role="img" aria-label="Illustration of a sedan"><use href="#car-sedan"/></svg></div>
+<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a></div></div>
+<section class="section" aria-labelledby="fin-h">
+<h2 id="fin-h" style="font-size:24px">Financial estimates (4-week campaign)</h2>
 <p class="sub">Modeled on published display benchmarks for travel / vehicle rental. Bought on a CPM basis: impressions lead to clicks, clicks lead to rental requests.</p>
 <table style="width:100%;border-collapse:collapse;font-size:15px;background:#fff;border:1px solid #d9d4cb;border-radius:8px;overflow:hidden">
 <tr><th style="text-align:left;padding:11px 14px;background:#17232b;color:#fff;font-weight:800">Metric</th><th style="text-align:right;padding:11px 14px;background:#17232b;color:#fff;font-weight:800">Value</th></tr>
@@ -186,52 +221,14 @@ a{color:inherit}
 </table>
 <p style="font-size:12.5px;color:#4a5a64;margin-top:8px">Benchmarks: all-industry Google Display Network averages (CTR ≈ 0.46–0.52%, conversion ≈ 0.5–0.57%, per WordStream); premium local-news and travel placements modeled at an $8.50 blended CPM ($5–$14 range). Figures are planning estimates, not guarantees.</p>
 </section>
-<section class="section" aria-labelledby="ads-h">
-<h2 id="ads-h">The ads</h2>
-<p class="sub">One creative idea in four sizes. Each ad is clickable and leads to the <a href="landing.html">landing page</a>.</p>
-
-<div class="ad-stage">
-<header><h3>Medium Rectangle</h3><span class="spec">300 x 250 px</span></header>
-<div class="ad-scroll"><a class="ad ad-mr" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Request a Rental">
-<div class="ad-brand"><span>AMES AUTO RENTALS</span><small>AMES, IOWA</small></div>
-<div class="body"><h4>Need wheels in Ames?</h4>
-<div class="mid"><ul><li>Affordable local rentals</li><li>Rides to DSM Airport</li><li>First come, first served</li></ul><svg class="car" viewBox="0 0 244 100" role="img" aria-label="Illustration of a sedan"><use href="#car-sedan"/></svg></div>
-<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a></div>
-<p class="why">Hook: the full question. Bullets carry the three selling points, with a car for quick recognition.</p>
+<section class="section"><div class="note"><h3>Creative notes</h3><p>All four sizes share the orange brand block, the same call to action, and the same URL. Wording varies slightly by size so the same message fits each space. Each ad is clickable and leads to the <a href="landing.html">landing page</a>. Car images are illustrations, not photos of the fleet.</p></div></section>
 </div>
-
-<div class="ad-stage">
-<header><h3>Leaderboard</h3><span class="spec">728 x 90 px</span></header>
-<div class="ad-scroll"><a class="ad ad-lb" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Rent local. Request a Rental">
-<div class="ad-brand"><span>AMES AUTO<br>RENTALS</span><small>AMES, IOWA</small></div>
-<div class="mid"><h4>Need wheels in Ames? Rent local.</h4><ul><li>Affordable</li><li>DSM Airport rides</li><li>First come, first served</li></ul></div>
-<div class="side"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></a></div>
-<p class="why">Hook adds “Rent local.” Bullets run in a row to fit the short, wide space.</p>
-</div>
-
-<div class="ad-pair">
-<div class="ad-stage">
-<header><h3>Wide Skyscraper</h3><span class="spec">160 x 600 px</span></header>
-<a class="ad ad-sk" href="landing.html" aria-label="Ames Auto Rentals: Rent local in Ames. Request a Rental">
-<div class="ad-brand"><span>AMES<br>AUTO<br>RENTALS</span><small>AMES, IOWA</small></div>
-<div class="body"><h4>Rent local in Ames.</h4><svg class="car" viewBox="0 0 244 100" role="img" aria-label="Illustration of a sedan"><use href="#car-sedan"/></svg>
-<ul><li>Affordable rates</li><li>Cars to vans</li><li>Rides to DSM Airport</li><li>First come, first served</li></ul>
-<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a>
-<p class="why">Hook: “Rent local in Ames.”</p>
-</div>
-<div class="ad-stage">
-<header><h3>Half Page</h3><span class="spec">300 x 600 px</span></header>
-<a class="ad ad-hp" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Request a Rental">
+<aside class="rail-right" aria-label="Advertisement"><div class="ad-slot"><span class="ad-label">Advertisement | Half Page 300 x 600</span><a class="ad ad-hp" href="landing.html" aria-label="Ames Auto Rentals: Need wheels in Ames? Request a Rental">
 <div class="ad-brand"><span>AMES AUTO<br>RENTALS</span><small>AMES,<br>IOWA</small></div>
 <div class="body"><h4>Need wheels<br>in Ames?</h4><div class="cars"><svg class="car" width="138" viewBox="0 0 244 100" role="img" aria-label="Illustration of a sedan"><use href="#car-sedan"/></svg><svg class="car" width="116" viewBox="0 0 244 100" role="img" aria-label="Illustration of a SUV"><use href="#car-suv"/></svg></div>
 <ul><li>Affordable car rentals, right here in Ames</li><li>Compact cars to a 15-passenger van</li><li>Rides to DSM Airport</li><li>First come, first served</li></ul>
-<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a>
-<p class="why">The largest ad gets two cars and the most detail.</p>
+<div class="foot"><span class="ad-btn">Request a Rental</span><span class="ad-url">amesautorentals.com</span></div></div></a></div></aside>
 </div>
-</div>
-
-<div class="note"><h3>Creative notes</h3><p>All four sizes share the orange brand block, the same call to action, and the same URL. Wording varies slightly by size so the same message fits each space. Car images are illustrations, not photos of the fleet.</p></div>
-</section>
 </div>
 </main>
 <footer class="site-footer">
