@@ -125,7 +125,7 @@ a{color:inherit}
 <form id="request-form" style="display:flex;flex-direction:column;gap:14px">
 <label class="field">Full name<input type="text" name="name" placeholder="First and last name" required></label><label class="field">Email<input type="email" name="email" placeholder="you@example.com" required></label><label class="field">Phone<input type="tel" name="phone" placeholder="(515) 555-0123" required></label>
 <div class="field-row"><label class="field">Pickup date<input type="date" name="date" placeholder="" required></label><label class="field">Number of days<input type="number" name="days" placeholder="e.g. 3" required></label></div>
-<label class="field">Vehicle type<select name="vehicle" required><option value="">Please choose</option><option>Compact</option><option>Hybrid</option><option>Standard</option><option>Premium</option><option>Small SUV</option><option>Minivan</option><option>Large SUV</option><option>15-Pass Van</option></select></label>
+<label class="field">Vehicle type<select name="vehicle" required><option value="">Please choose</option><option>Compact</option><option>Hybrid</option><option>Standard</option><option>Premium</option><option>Small SUV</option><option>Minivan</option><option>Large SUV</option><option>15-Pass Van</option><option>Moving Cargo Van</option></select></label>
 <button class="btn" type="submit">Submit request</button>
 <p class="form-msg" id="form-msg" tabindex="-1" role="status">This is a mockup, so nothing was sent. On the real page this would submit the request.</p>
 <p class="fineprint">No refunds for unused days. Not a confirmed reservation until approved.</p>
@@ -133,7 +133,7 @@ a{color:inherit}
 </div>
 </div>
 </section>
-<div class="trust"><div class="wrap"><div>Located only in Ames, Iowa</div><div>Rides to DSM Airport</div><div>Open 8am to 10pm, every day</div><div>Renters must be 18+ with a valid license</div></div></div>
+<div class="trust"><div class="wrap"><div>Located only in Ames, Iowa</div><div>Rides to DSM Airport</div><div>Phone hours 8am to 10pm</div><div>Renters 21+ with an Iowa license and their own insurance avoid extra fees</div></div></div>
 <div class="wrap">
 <section class="section" id="how" aria-labelledby="how-h">
 <h2 id="how-h">How it works</h2>
@@ -145,18 +145,18 @@ a{color:inherit}
 </section>
 <section class="section" id="rates" aria-labelledby="rates-h">
 <h2 id="rates-h">Vehicles and rates</h2>
-<p class="sub">Rates are shown here so you do not have to hunt for them.</p>
-<div class="grid"><div class="card rate-card"><h3>Compact</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Hybrid</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Standard</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Premium</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Small SUV</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Minivan</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>Large SUV</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div><div class="card rate-card"><h3>15-Pass Van</h3><span class="rate"><span class="todo">[RATE per 24 hrs]</span></span><span class="rate"><span class="todo">[Seats / example model]</span></span></div></div>
+<p class="sub">Rates are shown here so you do not have to hunt for them. Prices are per 24 hours and include tax.</p>
+<div class="grid"><div class="card rate-card"><h3>Compact</h3><span class="rate">$50.40 per 24 hrs</span><span class="rate">5 seats / Hyundai Accent, Toyota Yaris, Kia Rio, Nissan Versa</span></div><div class="card rate-card"><h3>Hybrid</h3><span class="rate">$56.00 per 24 hrs</span><span class="rate">5 seats / Toyota Prius, Honda Insight</span></div><div class="card rate-card"><h3>Standard</h3><span class="rate">$61.60 per 24 hrs</span><span class="rate">5 seats / Nissan Altima, Honda Accord, Ford Fusion</span></div><div class="card rate-card"><h3>Premium</h3><span class="rate">$67.20 per 24 hrs</span><span class="rate">5 seats / Nissan Maxima</span></div><div class="card rate-card"><h3>Small SUV</h3><span class="rate">$72.80 per 24 hrs</span><span class="rate">5 seats / Honda CR-V, Subaru Forester, Ford Escape</span></div><div class="card rate-card"><h3>Minivan</h3><span class="rate">$89.60 per 24 hrs</span><span class="rate">7 seats / Honda Odyssey, Toyota Sienna, Kia Sedona</span></div><div class="card rate-card"><h3>Large SUV</h3><span class="rate">$95.20 per 24 hrs</span><span class="rate">7 to 8 seats / Toyota Highlander, Honda Pilot, Nissan Armada</span></div><div class="card rate-card"><h3>15-Pass Van</h3><span class="rate">$145.60 per 24 hrs</span><span class="rate">15 seats / Ford E-350, Chevy Express</span></div><div class="card rate-card"><h3>Moving Cargo Van</h3><span class="rate">$100.00 per 24 hrs</span><span class="rate">2 seats / 100 miles included, limited availability, the only category allowed for moving large items</span></div></div>
 </section>
 <section class="section">
-<div class="note"><h2>Good to know before you request</h2><p>Vehicles are rented first come, first served. By appointment only, with no walk-ins. We cannot provide one-way rentals, and we do not offer pickup trucks. The renter must be the cardholder and show a valid license.</p></div>
+<div class="note"><h2>Good to know before you request</h2><p>Vehicles are rented first come, first served. By appointment only, with no walk-ins. We cannot provide one-way rentals, and every vehicle must be returned to our Ames, Iowa location. We do not offer pickup trucks, Suburbans, Tahoes, or trailers, and no towing or hauling. We cannot guarantee a specific make, model, or features. The renter must be the cardholder.</p><p style="margin-top:10px"><strong>To avoid extra fees,</strong> the primary renter should be 21+ with an Iowa driver’s license, their own full-coverage insurance, a debit or credit card, and 2 or fewer drivers. Extra fees if they do not: under 21 is $10 per day, CDW insurance is $20 per day, and there are one-time fees for a non-Iowa license and additional drivers. A $200 refundable deposit applies.</p><p style="margin-top:10px"><strong>Mileage and travel:</strong> 24 hours includes 350 miles within Iowa only. Travel is allowed in Iowa, surrounding states, and Kansas, with 2 or more days required to leave Iowa. There are no refunds for unused days, and extension requests must be sent in writing by replying to your confirmation email.</p></div>
 </section>
-<section class="section"><div class="note"><h3>Contact</h3><p><span class="todo">[PHONE]</span> | <span class="todo">[EMAIL]</span></p></div></section>
+<section class="section"><div class="note"><h3>Contact</h3><p><a href="tel:+15156351599">515-635-1599</a> | <span class="todo">[EMAIL]</span></p><p style="margin-top:8px">Need a same-day rental? Submit the request form, then leave a voicemail saying you did. Please do not text this number.</p></div></section>
 </div>
 </main>
 <footer class="site-footer">
 <div class="wrap">
-<div>Class project mockup. Not the official Ames Auto Rentals website. Rates, phone, and email are placeholders.</div>
+<div>Class project mockup. Not the official Ames Auto Rentals website. Rates and phone are from amesautorentals.com; check there for current prices.</div>
 <div><a href="index.html">Home</a> | <a href="ads.html">Ads</a> | <a href="landing.html">Landing Page</a></div>
 </div>
 </footer>
